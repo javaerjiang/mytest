@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace相当于 package名称空间 放置sql语句名称冲突,sql语句隔离-->
+<mapper namespace="test">
+<!--根据id查询用户
+    -->
+    <select id="queryUserById" parameterType="int" resultType="cn.itheima.po.User">
+        SELECT*FROM USER WHERE id = #{id}
+    </select>
+
+
+</mapper>
+
